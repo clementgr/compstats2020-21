@@ -371,7 +371,7 @@ Once trained, we can sample \textbf{z} from prior and use the decoder network to
 	\includegraphics[width=10cm]{../fig/input_to_latent_to_input.png}
 \end{figure}
 
-\textbf{Issue:} this doesn't \textit{seem} to be the case (\textcolor{green}{green} path shorter than \textcolor{red}{red} path)\\
+\textbf{Issue:} this doesn't \textit{seem} to be the case (\textcolor{green}{green} path is actually shorter than \textcolor{red}{red} path)\\
 
 \end{frame}
 
@@ -474,8 +474,8 @@ In constrast to the standard model, the proposed model provides a clear geometri
 \frametitle{Conclusion}
 
 \bit
-\item standard model assigns arbitrary density in regions of the input space where data has not been seen during training, while the proposed model assigns minimal density to such regions
-\item the variance term of the standard model behaves arbitrarily in regions with no latent codes, whereas the proposed model assigns high variance in those regions
+\item standard model assigns \textcolor{Framarouge}{arbitrary} density in regions of the input space where data has not been seen during training, while the proposed model assigns \textcolor{Framavert}{minimal density} to such regions
+\item the variance term of the standard model behaves \textcolor{Framarouge}{arbitrarily} in regions with no latent codes, whereas the proposed model assigns \textcolor{Framavert}{high variance} in those regions
 \eit
 
 \vspace{3mm}
@@ -485,6 +485,12 @@ In constrast to the standard model, the proposed model provides a clear geometri
 \end{frame}
 
 \section{Experiments}
+
+\begin{frame}
+	\frametitle{Experiments}
+	
+
+\end{frame}
 
 \begin{frame}
 	Bibliography :
