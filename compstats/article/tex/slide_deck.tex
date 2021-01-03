@@ -357,25 +357,32 @@ Once trained, we can sample \textbf{z} from prior and use the decoder network to
 
 \end{frame}
 
-\section{A misinterpretation of the latent space}
+\section{Latent Space Oddity}
 
 \begin{frame}
-\frametitle{Starting point}
+\frametitle{A misinterpretation of the latent space}
 
-\textbf{Goal:} equiped with a good latent space, points from the same class should be clother to each other than to members of the other classes\\
-
-\vspace{3mm}
-
-\textbf{Issue:} this doesn't \textit{seem} to be the case\\
+\textbf{Goal:} equiped with a good latent space, points from the same class should be clother to each other than to members of the other classes
 
 \vspace{3mm}
 
-\textbf{But:} this \textit{seemed} conclusion is incorrect\\
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{../fig/input_to_latent_to_input.png}
+\end{figure}
+
+\textbf{Issue:} this doesn't \textit{seem} to be the case (\textcolor{green}{green} path shorter than \textcolor{red}{red} path)\\
+
+\end{frame}
+
+\begin{frame}
+	
+This \textit{seemed} conclusion is incorrect\\
 $\rightarrow$ this is due to a misinterpretation of the latent space: it shouldn't be seen as a linear Euclidian space but rather as a \textbf{curved} space\\
 
 \vspace{3mm}
 \begin{block}{} 
-This curvature induces a Riemannian distance which is more meaningful than the usual Eulidian distance: under this new metric, two points from the same class are clother to each other than to members of the other classes
+This curvature induces a Riemannian metric which gives more meaningful distances than the usual Eulidian distance
 \end{block}
 
 % implies that the natural interpolant between two latent points is no longer a straight line, but a curve
