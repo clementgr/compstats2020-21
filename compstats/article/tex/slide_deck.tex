@@ -210,28 +210,7 @@ Given training data, generate new samples from the same distribution
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Generative models landscape}
-
-add figure
-
-\end{frame}
-
-\begin{frame}
-	
-\frametitle{Variational auto encoder}
-
-Define intractable density function with latent variable \textbf{z}:
-
-\begin{align*}
-	p_{\theta}(x) = \int p_{\theta}(x \vert \textbf{z}) p_{\theta}(\textbf{z}) d\textbf{z}
-\end{align*}
-
-This cannot be optimized directly: we will derive and optimize a lower bound on that likelihood instead
-
-\end{frame}
-
-\section{Auto Encoders}
+\section{Variational Auto Encoders}
 
 \begin{frame}
 \frametitle{Auto encoders}
@@ -250,8 +229,6 @@ unsupervised approach for learning a lower dimensional feature representation \t
 \textbf{Question: can we generate new images from an auto encoder?}
 
 \end{frame}
-
-\section{Variational Auto Encoders}
 
 \begin{frame}{Variational auto encoders}
 
@@ -347,7 +324,9 @@ Hence,
 	& \geq \textcolor{magenta}{\mathcal{L} (x, \theta, \delta)}
 \end{align*}
 
-We've identified a \textbf{tractable} + \textbf{differentiable} lower bound which we can take gradient of and optimize\end{frame}
+We've identified a \textbf{tractable} + \textbf{differentiable} lower bound which we can take gradient of and optimize (ELBO, evidence lower bound)
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Training}
