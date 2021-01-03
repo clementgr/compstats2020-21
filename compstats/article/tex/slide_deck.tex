@@ -377,7 +377,7 @@ Once trained, we can sample \textbf{z} from prior and use the decoder network to
 
 \begin{frame}
 	
-This \textit{seemed} conclusion is incorrect\\
+fThis \textit{seemed} conclusion is incorrect\\
 $\rightarrow$ this is due to a misinterpretation of the latent space: it shouldn't be seen as a linear Euclidian space but rather as a \textbf{curved} space\\
 
 \vspace{3mm}
@@ -389,6 +389,102 @@ This curvature induces a Riemannian metric which gives more meaningful distances
 
 \end{frame}
 
+\section{Geometry of the decoder}
+
+\begin{frame}
+	\frametitle{VAE decoder}
+	
+The decoder driving VAEs is \textbf{stochastic}:
+
+\begin{align*}
+	f(z)= \mu(z) + \sigma(z)  \odot \varepsilon \quad  \left( \varepsilon \sim \mathcal{N}(0, \mathbb{I}_D) \right)
+\end{align*} 
+
+$\rightarrow$ this implies a \textbf{stochastic} Riemannian geometry
+
+\vspace{2mm}
+\begin{block}{Theorem 1} 
+	if stochastic decoder is at least twice differentiable, the expected metric equals:
+	\begin{align*}
+		\overline{\text{M}}_z = \mathbb{E}_{p(\varepsilon)} \left[ \text{M}_z\right] = \left( \text{J}_z^{(\mu)} \right)^\top \left( \text{J}_z^{(\mu)} \right) + \left( \text{J}_z^{(\sigma)} \right)^\top \left( \text{J}_z^{(\sigma)} \right)
+	\end{align*} 
+\end{block}
+\vspace{2mm}
+where $\text{J}_z^{(\mu)}$ and $\text{J}_z^{(\sigma)}$ are the jacobian matrices of $\mu(\cdot)$ and $\sigma(\cdot)$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{VAE decoder}
+	
+Coupled with Theorem 2, we get that the (deterministic) expected metric $\overline{\text{M}}_z$ is a good approximation to $\text{M}_z$ when the data dimension is large: we can use the theory of deterministic decoders
+
+\vspace{2mm}
+\begin{block}{Theorem 2} 
+	\centering
+	$\lim_{D \rightarrow \infty} \text{Var} \left( \text{M}_z \right) = 0$
+\end{block}
+\vspace{2mm}
+
+The resulting induced distance will be large in regions of the latent space where the decoder is highly uncertain (high variance)\\
+$\rightarrow$ shortest paths will tend to avoid these regions
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Ensuring proper geometry}
+
+The geometry of a VAE depends on both the mean and the variance of its decoder\\
+$\rightarrow$ successful training will provide good estimates of the geometry in regions near the data\\
+
+\vspace{3mm}
+
+The decoder is expected to have high variance in regions with no data\\
+In practice, variance estimates are extrpolated to regions without data: as neural nets extrapolate poorly, practical variance estimates tend to be poor in regions with no data...\\
+
+\vspace{3mm}
+
+\textbf{Issue:} we need well-behaved variance functions to ensure a well-behaved geometry
+	
+\end{frame}
+
+\begin{frame}
+\frametitle{Ensuring proper geometry}
+
+\textbf{Solution:} model decoder's \textit{precision} instead of its variance\\
+
+\vspace{3mm}
+
+\textbf{add more details}
+
+\vspace{3mm}
+
+The measure element: $\sqrt{\text{det}\left(\text{M}_z\right)}$\\
+
+\vspace{3mm}
+
+\textbf{add more details}
+
+\vspace{3mm}
+
+In constrast to the standard model, the proposed model provides a clear geometrical structure that follows the trend of the data
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusion}
+
+\bit
+\item standard model assigns arbitrary density in regions of the input space where data has not been seen during training, while the proposed model assigns minimal density to such regions
+\item the variance term of the standard model behaves arbitrarily in regions with no latent codes, whereas the proposed model assigns high variance in those regions
+\eit
+
+\vspace{3mm}
+
+\textbf{Result:} proposed model achieves better marginal likelihood on held-out data
+
+\end{frame}
+
+\section{Experiments}
 
 \begin{frame}
 	Bibliography :
