@@ -1,4 +1,4 @@
 \babel@toc {french}{}
 \beamer@sectionintoc {1}{Generative Models}{2}{0}{1}
-\beamer@sectionintoc {2}{Auto Encoders}{7}{0}{2}
-\beamer@sectionintoc {3}{Variational Auto Encoders}{9}{0}{3}
+\beamer@sectionintoc {2}{Variational Auto Encoders}{5}{0}{2}
+\beamer@sectionintoc {3}{A misinterpretation of the latent space}{15}{0}{3}

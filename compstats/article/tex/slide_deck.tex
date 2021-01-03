@@ -9,10 +9,10 @@
 
 \graphicspath{{./images/}}
 \def\bc{\begin{center}}
-\def\ec{\end{center}}
+	\def\ec{\end{center}}
 %========================================================
 \def\bit{\begin{itemize}}
-\def\eit{\end{itemize}}
+	\def\eit{\end{itemize}}
 
 \def\la{{\langle}}
 \def\ra{{\rangle}}
@@ -168,185 +168,181 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
-\begin{frame}
-  \titlepage
-\end{frame}
-
-\section{Generative Models}
-
-\begin{frame}
-\frametitle{Goal}
-
-Given training data, generate new samples from the same distribution
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.3]{../fig/density_estimation.png}
-\end{figure}
-
-\begin{center}
-	\begin{minipage}{5cm}
-		\begin{varblock}[5cm]{}
-			\centering
-			learn $p_{\text{model}}(x)$ close to $p_{\text{data}}(x)$
-		\end{varblock}
-	\end{minipage}
-\end{center}
-
-\end{frame}
-
-\begin{frame}
-	\frametitle{Density estimation}
 	
-\bit
-\item core problem in the \textbf{unsupervised} learning setting
-\item explicit: explicitly define and solve $p_{\text{model}}(x)$ 
-\item implicit: learn a model that can sample from $p_{\text{model}}(x)$ without explicitly defining it
-\eit
-
-%goal: learn some underlying hidden \textbf{structure} of the data \\
-%$\rightarrow$ \textit{clustering, dimensionality reduction, density estimation}
-
-\end{frame}
-
-\section{Variational Auto Encoders}
-
-\begin{frame}
-\frametitle{Auto encoders}
-
-unsupervised approach for learning a lower dimensional feature representation \textbf{z} from unlabeled training data $x$
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.3]{../fig/ae.png}
-\end{figure}
-
-\textbf{z} captures meaningful factors of variation in the data\\
-
-\vspace{3mm}
-\centering
-\textbf{Question: can we generate new images from an auto encoder?}
-
-\end{frame}
-
-\begin{frame}{Variational auto encoders}
-
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\section{Generative Models}
+	
+	\begin{frame}
+		\frametitle{Goal}
+		
+		Given training data, generate new samples from the same distribution
+		
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.3]{../fig/density_estimation.png}
+		\end{figure}
+		
+		\begin{center}
+			\begin{minipage}{5cm}
+				\begin{varblock}[5cm]{}
+					\centering
+					learn $p_{\text{model}}(x)$ close to $p_{\text{data}}(x)$
+				\end{varblock}
+			\end{minipage}
+		\end{center}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Density estimation}
+		
+		\bit
+		\item core problem in the \textbf{unsupervised} learning setting
+		\item explicit: explicitly define and solve $p_{\text{model}}(x)$ 
+		\item implicit: learn a model that can sample from $p_{\text{model}}(x)$ without explicitly defining it
+		\eit
+		
+		%goal: learn some underlying hidden \textbf{structure} of the data \\
+		%$\rightarrow$ \textit{clustering, dimensionality reduction, density estimation}
+		
+	\end{frame}
+	
+	\section{Variational Auto Encoders}
+	
+	\begin{frame}
+		\frametitle{Auto encoders}
+		
+		unsupervised approach for learning a lower dimensional feature representation \textbf{z} from unlabeled training data $x$
+		
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.3]{../fig/ae.png}
+		\end{figure}
+		
+		\textbf{z} captures meaningful factors of variation in the data\\
+		
+		\vspace{3mm}
+		\centering
+		\textbf{Question: can we generate new images from an auto encoder?}
+		
+	\end{frame}
+	
+	\begin{frame}{Variational auto encoders}
+		
 VAEs are a probabilistic spin on auto encoders that will let us sample from the model to generate data\\
 
 \vspace{2mm}
 
 Assumption: training data $\{ x_i \}_{i \in [1,N]}$ is generated from underlying (latent) \textbf{unobserved} representation \textbf{z}\\
 
-\vspace{5mm}
+\vspace{2mm}
 
-\begin{columns}
-	\column{0.4\linewidth}
+\begin{figure}
 	\centering
-	\includegraphics[width=5cm]{../fig/x_from_z.png}
-	\column{0.4\linewidth}
-	\textbf{Goal:} estimate the true parameters $\theta^*$ of this generative model
-\end{columns} 
+\includegraphics[width=5cm]{../fig/x_from_z.png}
+\end{figure}
 
-\vspace{5mm}
-
-Choose simple prior $p(z)$ (e.g. Gaussian)\\
-Conditional $p(x \vert z)$ is \textbf{complex}: represent it with a neural network\\
+\textbf{Goal:} estimate the true parameters $\theta^*$ of this generative model\\
 
 \vspace{3mm}
 \centering
 \textbf{Question: how do we train the model?}
-
+		
 \end{frame}
-
+	
 \begin{frame}{Intractability}
-
-Natural strategy: learn model parameters to maximize the likelihood of the training data
-
-\begin{align*}
-	p_{\theta}(x) = \int p_{\theta}(x \vert \textbf{z}) p_{\theta}(\textbf{z}) d\textbf{z}
-\end{align*}
-
-Though we know $p_{\theta}(x \vert \textbf{z})$ and $p_{\theta}(\textbf{z})$, it is \textbf{intractable} to compute $p_{\theta}(x \vert \textbf{z})$ for every $z$!\\
-
+Choose simple prior $p(z)$ (e.g. Gaussian)\\
+Conditional $p(x \vert z)$ is \textbf{complex}: represent it with a neural network\\
 \vspace{3mm}
-
-Posterior density is also \textbf{intractable}: 
-
-\begin{align*}
-	p_{\theta}(\textbf{z} \vert x) = \dfrac{p_{\theta}(x \vert \textbf{z}) p_{\theta}(\textbf{z})}{p_{\theta}(x)} 
-\end{align*}
-
+Natural strategy: learn model parameters to maximize the likelihood of the training data
+	
+	\begin{align*}
+		p_{\theta}(x) = \int p_{\theta}(x \vert \textbf{z}) p_{\theta}(\textbf{z}) d\textbf{z}
+	\end{align*}
+	
+	Though we know $p_{\theta}(x \vert \textbf{z})$ and $p_{\theta}(\textbf{z})$, it is \textbf{intractable} to compute $p_{\theta}(x \vert \textbf{z})$ for every $z$!\\
+	
+	\vspace{3mm}
+	
+	Posterior density is also \textbf{intractable}: 
+	
+	\begin{align*}
+		p_{\theta}(\textbf{z} \vert x) = \dfrac{p_{\theta}(x \vert \textbf{z}) p_{\theta}(\textbf{z})}{p_{\theta}(x)} 
+	\end{align*}
+	
 \end{frame}
 
 \begin{frame}
-\frametitle{Solution}
-
-In addition to the \textbf{decoder} network modeling $p_{\theta}(x \vert z)$, define an additional \textbf{encoder} network $q_{\delta}(z \vert x)$ that approximates  $p_{\theta}(z \vert x)$.\\
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.4]{../fig/p_and_q.png}
-\end{figure}
-
-
-This allows us to derive a \textbf{tractable} lower bound on the data likelihood
-
+	\frametitle{Solution}
+	
+	In addition to the \textbf{decoder} network modeling $p_{\theta}(x \vert z)$, define an additional \textbf{encoder} network $q_{\delta}(z \vert x)$ that approximates  $p_{\theta}(z \vert x)$.\\
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.4]{../fig/p_and_q.png}
+	\end{figure}
+	
+	
+	This allows us to derive a \textbf{tractable} lower bound on the data likelihood
+	
 \end{frame}
 
 
 \begin{frame} 
-\frametitle{Tractable lower bound}
-
-\begin{align*}
-	\log p_{\theta}(x) & = \mathbb{E}_{z \sim q_\delta(z \vert x)} \big[ \log p_{\theta}(x) \big]\\
-	& = \mathbb{E}_{z} \left[ \log \dfrac{p_{\theta}(x \vert z)p_{\theta}(z)}{p_{\theta}(z \vert x)} \right]\\
-	& = \mathbb{E}_{z} \left[ \log \dfrac{p_{\theta}(x \vert z)p_{\theta}(z)}{p_{\theta}(z \vert x)} \dfrac{q_\delta(z \vert x)}{q_\delta(z \vert x)} \right]\\
-	& = \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right] - \mathbb{E}_{z} \left[ \log \dfrac{q_\delta(z \vert x)}{p_{\theta}(z)} \right] + \mathbb{E}_{z} \left[ \log \dfrac{q_\delta(z \vert x)}{p_{\theta}(z \vert x)} \right] \\
-	& = \textcolor{Framavert}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right]} - \textcolor{Framableu}{d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right)} + \textcolor{Framaorange}{ d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z \vert x) \right)} \\
-\end{align*}
-
+	\frametitle{Tractable lower bound}
+	
+	\begin{align*}
+		\log p_{\theta}(x) & = \mathbb{E}_{z \sim q_\delta(z \vert x)} \big[ \log p_{\theta}(x) \big]\\
+		& = \mathbb{E}_{z} \left[ \log \dfrac{p_{\theta}(x \vert z)p_{\theta}(z)}{p_{\theta}(z \vert x)} \right]\\
+		& = \mathbb{E}_{z} \left[ \log \dfrac{p_{\theta}(x \vert z)p_{\theta}(z)}{p_{\theta}(z \vert x)} \dfrac{q_\delta(z \vert x)}{q_\delta(z \vert x)} \right]\\
+		& = \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right] - \mathbb{E}_{z} \left[ \log \dfrac{q_\delta(z \vert x)}{p_{\theta}(z)} \right] + \mathbb{E}_{z} \left[ \log \dfrac{q_\delta(z \vert x)}{p_{\theta}(z \vert x)} \right] \\
+		& = \textcolor{Framavert}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right]} - \textcolor{Framableu}{d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right)} + \textcolor{Framaorange}{ d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z \vert x) \right)} \\
+	\end{align*}
+	
 \end{frame}
 
 \begin{frame}
-\frametitle{Tractable lower bound}
-
-- decoder network gives $p_\theta(x \vert z)$: we can estimate $\textcolor{Framavert}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right]}$ through sampling\\
-- $\textcolor{Framableu}{d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right)}$ is the KL-div of two Gaussian distributions: it has a nice closed from solution\\
-- though $p_\theta(z \vert x)$ is intractable, we know KL-div is always positive: $\textcolor{Framaorange}{ d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z \vert x) \right)} \geq 0$\\
-
-\vspace{5mm}
-
-Hence,
-
-\begin{align*}
-	\log p_{\theta}(x) & \geq \textcolor{magenta}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right] - d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right) }\\
-	& \geq \textcolor{magenta}{\mathcal{L} (x, \theta, \delta)}
-\end{align*}
-
-We've identified a \textbf{tractable} + \textbf{differentiable} lower bound which we can take gradient of and optimize (ELBO, evidence lower bound)
-
+	\frametitle{Tractable lower bound}
+	
+	- decoder network gives $p_\theta(x \vert z)$: we can estimate $\textcolor{Framavert}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right]}$ through sampling\\
+	- $\textcolor{Framableu}{d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right)}$ is the KL-div of two Gaussian distributions: it has a nice closed from solution\\
+	- though $p_\theta(z \vert x)$ is intractable, we know KL-div is always positive: $\textcolor{Framaorange}{ d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z \vert x) \right)} \geq 0$\\
+	
+	\vspace{5mm}
+	
+	Hence,
+	
+	\begin{align*}
+		\log p_{\theta}(x) & \geq \textcolor{magenta}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right] - d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right) }\\
+		& \geq \textcolor{magenta}{\mathcal{L} (x, \theta, \delta)}
+	\end{align*}
+	
+	We've identified a \textbf{tractable} + \textbf{differentiable} lower bound which we can take gradient of and optimize (ELBO, evidence lower bound)
+	
 \end{frame}
 
 \begin{frame}
-\frametitle{Training}
-
-Optimal parameters will be the ones that maximizes this lower bound: 
-
-\begin{align*}
- \theta^*, \delta^* = \arg \max_{\theta, \delta} \sum_{i=1}^{N} \mathcal{L} (x_i, \theta, \delta)
-\end{align*} 
-
+	\frametitle{Training}
+	
+	Optimal parameters will be the ones that maximizes this lower bound: 
+	
+	\begin{align*}
+		\theta^*, \delta^* = \arg \max_{\theta, \delta} \sum_{i=1}^{N} \mathcal{L} (x_i, \theta, \delta)
+	\end{align*} 
+	
 \end{frame}
 
 \begin{frame}
-\frametitle{Training}
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.33]{../fig/vae.png}
-\end{figure}
-
+	\frametitle{Training}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.33]{../fig/vae.png}
+	\end{figure}
+	
 \end{frame}
 
 \begin{frame}
@@ -361,15 +357,41 @@ Once trained, we can sample \textbf{z} from prior and use the decoder network to
 
 \end{frame}
 
+\section{A misinterpretation of the latent space}
+
 \begin{frame}
-Bibliography :
+\frametitle{Starting point}
 
-\vspace{2mm}
+\textbf{Goal:} equiped with a good latent space, points from the same class should be clother to each other than to members of the other classes\\
 
-\nocite{*}
-\small{\bibliographystyle{unsrt}
-\bibliography{biblio}\vspace{0.75in}}
+\vspace{3mm}
 
+\textbf{Issue:} this doesn't \textit{seem} to be the case\\
+
+\vspace{3mm}
+
+\textbf{But:} this \textit{seemed} conclusion is incorrect\\
+$\rightarrow$ this is due to a misinterpretation of the latent space: it shouldn't be seen as a linear Euclidian space but rather as a \textbf{curved} space\\
+
+\vspace{3mm}
+\begin{block}{} 
+This curvature induces a Riemannian distance which is more meaningful than the usual Eulidian distance: under this new metric, two points from the same class are clother to each other than to members of the other classes
+\end{block}
+
+% implies that the natural interpolant between two latent points is no longer a straight line, but a curve
+
+\end{frame}
+
+
+\begin{frame}
+	Bibliography :
+	
+	\vspace{2mm}
+	
+	\nocite{*}
+	\small{\bibliographystyle{unsrt}
+		\bibliography{biblio}\vspace{0.75in}}
+	
 \end{frame}
 
 \end{document}
