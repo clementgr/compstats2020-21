@@ -1,6 +1,6 @@
 \babel@toc {french}{}
 \beamer@sectionintoc {1}{Generative Models}{2}{0}{1}
 \beamer@sectionintoc {2}{Variational Auto Encoders}{5}{0}{2}
-\beamer@sectionintoc {3}{Latent Space Oddity}{15}{0}{3}
-\beamer@sectionintoc {4}{Geometry of the decoder}{18}{0}{4}
-\beamer@sectionintoc {5}{Experiments}{24}{0}{5}
+\beamer@sectionintoc {3}{Latent Space Oddity}{16}{0}{3}
+\beamer@sectionintoc {4}{Geometry of the decoder}{19}{0}{4}
+\beamer@sectionintoc {5}{Experiments}{25}{0}{5}
