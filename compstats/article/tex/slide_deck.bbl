@@ -1,5 +1,9 @@
 \begin{thebibliography}{1}
 
+\bibitem{reparamtrick}
+Carl Doersch.
+\newblock Tutorial on variational autoencoders, 2021.
+
 \bibitem{paper}
 Georgios Arvanitidis, Lars~Kai Hansen, and Søren Hauberg.
 \newblock Latent space oddity: on the curvature of deep generative models,

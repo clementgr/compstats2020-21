@@ -307,7 +307,7 @@ Natural strategy: learn model parameters to maximize the likelihood of the train
 \begin{frame}
 	\frametitle{Tractable lower bound}
 	
-	- decoder network gives $p_\theta(x \vert z)$: we can estimate $\textcolor{Framavert}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right]}$ through sampling (differentiable with the reparametrization trick)\\
+	- decoder network gives $p_\theta(x \vert z)$: we can estimate $\textcolor{Framavert}{ \mathbb{E}_{z} \left[ \log p_{\theta}(x \vert z) \right]}$ through sampling (differentiable with the reparametrization trick \cite{reparamtrick})\\
 	- $\textcolor{Framableu}{d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z) \right)}$ is the KL-div of two Gaussian distributions: it has a nice closed from solution (differentiable)\\
 	- though $p_\theta(z \vert x)$ is intractable, we know KL-div is always positive: $\textcolor{Framaorange}{ d_{\text{KL}} \left( q_\delta(z \vert x) \vert \vert p_{\theta}(z \vert x) \right)} \geq 0$\\
 	
@@ -377,13 +377,23 @@ Natural strategy: learn model parameters to maximize the likelihood of the train
 \end{frame}
 
 \begin{frame}
-	\frametitle{Training}
+	\frametitle{Reparametrization trick}
 	
 	\begin{figure}
 		\centering
-		\includegraphics[scale=0.33]{../fig/vae.png}
+		\includegraphics[scale=0.33]{../fig/plain_vae.png}
 	\end{figure}
 	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reparametrization trick}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.33]{../fig/reparametrization_trick.png}
+	\end{figure}
+	 
 \end{frame}
 
 \begin{frame}
@@ -391,9 +401,11 @@ Natural strategy: learn model parameters to maximize the likelihood of the train
 
 Once trained, we can sample \textbf{z} from prior and use the decoder network to generate new data:
 
+\vspace{3mm}
+
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.4]{../fig/generate_data.png}
+	\includegraphics[scale=0.5]{../fig/generate_data.png}
 \end{figure}
 
 \end{frame}
@@ -418,7 +430,7 @@ Once trained, we can sample \textbf{z} from prior and use the decoder network to
 
 \begin{frame}
 	
-fThis \textit{seemed} conclusion is incorrect\\
+This \textit{seemed} conclusion is incorrect\\
 $\rightarrow$ this is due to a misinterpretation of the latent space: it shouldn't be seen as a linear Euclidian space but rather as a \textbf{curved} space\\
 
 \vspace{3mm}
