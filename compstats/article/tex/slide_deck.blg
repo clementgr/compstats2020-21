@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: slide_deck.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
-You've used 2 entries,
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            453 strings with 3719 characters,
-and the built_in function-call counts, 287 in all, are:
-= -- 17
-> -- 15
+            457 strings with 3907 characters,
+and the built_in function-call counts, 475 in all, are:
+= -- 26
+> -- 35
 < -- 0
-+ -- 6
-- -- 4
-* -- 9
-:= -- 49
-add.period$ -- 4
-call.type$ -- 2
-change.case$ -- 2
++ -- 13
+- -- 10
+* -- 21
+:= -- 81
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 10
-empty$ -- 37
-format.name$ -- 4
-if$ -- 63
+cite$ -- 3
+duplicate$ -- 15
+empty$ -- 55
+format.name$ -- 10
+if$ -- 103
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 3
 missing$ -- 0
-newline$ -- 11
-num.names$ -- 2
-pop$ -- 14
+newline$ -- 15
+num.names$ -- 3
+pop$ -- 21
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 8
+skip$ -- 12
 stack$ -- 0
 substring$ -- 0
-swap$ -- 2
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 3
-write$ -- 18
+while$ -- 3
+width$ -- 4
+write$ -- 26
