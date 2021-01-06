@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  6 JAN 2021 00:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  6 JAN 2021 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1846,11 +1846,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [5
 
 ]
-<../fig/ae.png, id=297, 445.665pt x 342.27875pt>
-File: ../fig/ae.png Graphic file (type png)
-<use ../fig/ae.png>
-Package pdftex.def Info: ../fig/ae.png  used on input line 231.
-(pdftex.def)             Requested size: 133.70053pt x 102.6844pt.
+<../fig/ae.pdf, id=297, 334.51192pt x 256.79526pt>
+File: ../fig/ae.pdf Graphic file (type pdf)
+<use ../fig/ae.pdf>
+Package pdftex.def Info: ../fig/ae.pdf  used on input line 231.
+(pdftex.def)             Requested size: 100.35434pt x 77.03917pt.
 
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
@@ -1858,8 +1858,8 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 [6
 
- <../fig/ae.png>]
-<../fig/x_from_z.png, id=336, 524.96124pt x 176.66pt>
+ <../fig/ae.pdf>]
+<../fig/x_from_z.png, id=349, 524.96124pt x 176.66pt>
 File: ../fig/x_from_z.png Graphic file (type png)
 <use ../fig/x_from_z.png>
 Package pdftex.def Info: ../fig/x_from_z.png  used on input line 254.
@@ -1879,11 +1879,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [8
 
 ]
-<../fig/p_and_q.png, id=419, 519.9425pt x 273.02pt>
-File: ../fig/p_and_q.png Graphic file (type png)
-<use ../fig/p_and_q.png>
-Package pdftex.def Info: ../fig/p_and_q.png  used on input line 291.
-(pdftex.def)             Requested size: 207.97331pt x 109.20605pt.
+<../fig/p_and_q.pdf, id=432, 389.9926pt x 205.02489pt>
+File: ../fig/p_and_q.pdf Graphic file (type pdf)
+<use ../fig/p_and_q.pdf>
+Package pdftex.def Info: ../fig/p_and_q.pdf  used on input line 291.
+(pdftex.def)             Requested size: 155.99426pt x 82.00848pt.
 
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
@@ -1891,7 +1891,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 [9
 
- <../fig/p_and_q.png>]
+ <../fig/p_and_q.pdf>]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1920,11 +1920,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [13
 
 ]
-<../fig/plain_vae.png, id=614, 692.5875pt x 554.07pt>
-File: ../fig/plain_vae.png Graphic file (type png)
-<use ../fig/plain_vae.png>
-Package pdftex.def Info: ../fig/plain_vae.png  used on input line 387.
-(pdftex.def)             Requested size: 228.55458pt x 182.84366pt.
+<../fig/plain_vae.pdf, id=654, 519.84375pt x 416.25822pt>
+File: ../fig/plain_vae.pdf Graphic file (type pdf)
+<use ../fig/plain_vae.pdf>
+Package pdftex.def Info: ../fig/plain_vae.pdf  used on input line 387.
+(pdftex.def)             Requested size: 233.92752pt x 187.31447pt.
 
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
@@ -1932,13 +1932,13 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 [14
 
- <../fig/plain_vae.png>]
-<../fig/reparametrization_trick.png, id=653, 714.67pt x 557.08125pt>
-File: ../fig/reparametrization_trick.png Graphic file (type png)
-<use ../fig/reparametrization_trick.png>
-Package pdftex.def Info: ../fig/reparametrization_trick.png  used on input line
+ <../fig/plain_vae.pdf>]
+<../fig/reparametrization_trick.pdf, id=720, 536.23573pt x 418.18799pt>
+File: ../fig/reparametrization_trick.pdf Graphic file (type pdf)
+<use ../fig/reparametrization_trick.pdf>
+Package pdftex.def Info: ../fig/reparametrization_trick.pdf  used on input line
  397.
-(pdftex.def)             Requested size: 235.84183pt x 183.83737pt.
+(pdftex.def)             Requested size: 241.30385pt x 188.18285pt.
 
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
@@ -1946,12 +1946,12 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 [15
 
- <../fig/reparametrization_trick.png>]
-<../fig/generate_data.png, id=692, 244.915pt x 219.82124pt>
-File: ../fig/generate_data.png Graphic file (type png)
-<use ../fig/generate_data.png>
-Package pdftex.def Info: ../fig/generate_data.png  used on input line 411.
-(pdftex.def)             Requested size: 122.45718pt x 109.91034pt.
+ <../fig/reparametrization_trick.pdf>]
+<../fig/generate_data.pdf, id=787, 181.07323pt x 164.90646pt>
+File: ../fig/generate_data.pdf Graphic file (type pdf)
+<use ../fig/generate_data.pdf>
+Package pdftex.def Info: ../fig/generate_data.pdf  used on input line 411.
+(pdftex.def)             Requested size: 90.53639pt x 82.45302pt.
 
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
@@ -1959,7 +1959,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 [16
 
- <../fig/generate_data.png>]
+ <../fig/generate_data.pdf>]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1967,7 +1967,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [17
 
 ]
-<../fig/input_to_latent_to_input.png, id=770, 1560.83125pt x 515.9275pt>
+<../fig/input_to_latent_to_input.png, id=878, 1560.83125pt x 515.9275pt>
 File: ../fig/input_to_latent_to_input.png Graphic file (type png)
 <use ../fig/input_to_latent_to_input.png>
 Package pdftex.def Info: ../fig/input_to_latent_to_input.png  used on input lin
@@ -2070,8 +2070,8 @@ Package rerunfilecheck Info: File `slide_deck.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  35112 strings out of 480608
- 731602 string characters out of 5903629
- 1175770 words of memory out of 5000000
+ 731722 string characters out of 5903629
+ 1175771 words of memory out of 5000000
  50082 multiletter control sequences out of 15000+600000
  597507 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2089,10 +2089,10 @@ e/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/
 texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on slide_deck.pdf (28 pages, 669171 bytes).
+Output written on slide_deck.pdf (28 pages, 667227 bytes).
 PDF statistics:
- 1252 PDF objects out of 1440 (max. 8388607)
- 1137 compressed objects within 12 object streams
+ 1360 PDF objects out of 1440 (max. 8388607)
+ 1217 compressed objects within 13 object streams
  64 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
