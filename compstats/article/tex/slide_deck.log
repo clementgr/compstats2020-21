@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  6 JAN 2021 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  6 JAN 2021 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1818,7 +1818,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [2
 
 ]
-<../fig/density_estimation.pdf, id=177, 450.9347pt x 193.58261pt>
+<../fig/density_estimation.pdf, id=181, 450.9347pt x 193.58261pt>
 File: ../fig/density_estimation.pdf Graphic file (type pdf)
 <use ../fig/density_estimation.pdf>
 Package pdftex.def Info: ../fig/density_estimation.pdf  used on input line 197.
@@ -1846,7 +1846,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [5
 
 ]
-<../fig/ae.pdf, id=303, 334.51192pt x 256.79526pt>
+<../fig/ae.pdf, id=310, 334.51192pt x 256.79526pt>
 File: ../fig/ae.pdf Graphic file (type pdf)
 <use ../fig/ae.pdf>
 Package pdftex.def Info: ../fig/ae.pdf  used on input line 231.
@@ -1859,7 +1859,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [6
 
  <../fig/ae.pdf>]
-<../fig/x_from_z.pdf, id=355, 394.28555pt x 132.88242pt>
+<../fig/x_from_z.pdf, id=363, 394.28555pt x 132.88242pt>
 File: ../fig/x_from_z.pdf Graphic file (type pdf)
 <use ../fig/x_from_z.pdf>
 Package pdftex.def Info: ../fig/x_from_z.pdf  used on input line 254.
@@ -1879,7 +1879,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [8
 
 ]
-<../fig/p_and_q.pdf, id=451, 389.9926pt x 205.02489pt>
+<../fig/p_and_q.pdf, id=461, 389.9926pt x 205.02489pt>
 File: ../fig/p_and_q.pdf Graphic file (type pdf)
 <use ../fig/p_and_q.pdf>
 Package pdftex.def Info: ../fig/p_and_q.pdf  used on input line 291.
@@ -1920,7 +1920,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [13
 
 ]
-<../fig/plain_vae.pdf, id=673, 519.84375pt x 416.25822pt>
+<../fig/plain_vae.pdf, id=688, 519.84375pt x 416.25822pt>
 File: ../fig/plain_vae.pdf Graphic file (type pdf)
 <use ../fig/plain_vae.pdf>
 Package pdftex.def Info: ../fig/plain_vae.pdf  used on input line 387.
@@ -1933,7 +1933,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [14
 
  <../fig/plain_vae.pdf>]
-<../fig/reparametrization_trick.pdf, id=740, 536.23573pt x 418.18799pt>
+<../fig/reparametrization_trick.pdf, id=756, 536.23573pt x 418.18799pt>
 File: ../fig/reparametrization_trick.pdf Graphic file (type pdf)
 <use ../fig/reparametrization_trick.pdf>
 Package pdftex.def Info: ../fig/reparametrization_trick.pdf  used on input line
@@ -1947,7 +1947,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [15
 
  <../fig/reparametrization_trick.pdf>]
-<../fig/generate_data.pdf, id=806, 181.07323pt x 164.90646pt>
+<../fig/generate_data.pdf, id=823, 181.07323pt x 164.90646pt>
 File: ../fig/generate_data.pdf Graphic file (type pdf)
 <use ../fig/generate_data.pdf>
 Package pdftex.def Info: ../fig/generate_data.pdf  used on input line 411.
@@ -1967,7 +1967,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [17
 
 ]
-<../fig/input_to_latent_to_input.png, id=897, 1560.83125pt x 515.9275pt>
+<../fig/input_to_latent_to_input.png, id=916, 1560.83125pt x 515.9275pt>
 File: ../fig/input_to_latent_to_input.png Graphic file (type png)
 <use ../fig/input_to_latent_to_input.png>
 Package pdftex.def Info: ../fig/input_to_latent_to_input.png  used on input lin
@@ -1981,6 +1981,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [18
 
  <../fig/input_to_latent_to_input.png>]
+Overfull \hbox (1.84683pt too wide) detected at line 456
+[]
+ []
+
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2067,19 +2072,19 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 \tf@snm=\write10
 \openout10 = `slide_deck.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 588.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 588.
  (./slide_deck.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 565.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 588.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 588.
 Package rerunfilecheck Info: File `slide_deck.out' has not changed.
 (rerunfilecheck)             Checksum: 3A10CE03D01ECD9770D1F97757B40330;270.
  ) 
 Here is how much of TeX's memory you used:
- 35114 strings out of 480608
- 731789 string characters out of 5903629
- 1175772 words of memory out of 5000000
- 50082 multiletter control sequences out of 15000+600000
+ 35146 strings out of 480608
+ 732706 string characters out of 5903629
+ 1175802 words of memory out of 5000000
+ 50113 multiletter control sequences out of 15000+600000
  597507 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,20n,87p,799b,773s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2096,10 +2101,10 @@ e/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/
 texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on slide_deck.pdf (29 pages, 651157 bytes).
+Output written on slide_deck.pdf (29 pages, 656568 bytes).
 PDF statistics:
- 1418 PDF objects out of 1440 (max. 8388607)
- 1270 compressed objects within 13 object streams
- 66 named destinations out of 1000 (max. 500000)
+ 1452 PDF objects out of 1728 (max. 8388607)
+ 1302 compressed objects within 14 object streams
+ 67 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

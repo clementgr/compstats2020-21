@@ -429,16 +429,29 @@ Once trained, we can sample \textbf{z} from prior and use the decoder network to
 \end{frame}
 
 \begin{frame}
+	\begin{center}
+		\textbf{is the Euclidean norm the best metric ?}\\
+		\textbf{can we use an alternative definition of (local) distance?}\\
+	\end{center}
 	
-This \textit{seemed} conclusion is incorrect\\
+	
+	\vspace{3mm}
+	
+This previous onclusion is incorrect\\
 $\rightarrow$ this is due to a misinterpretation of the latent space: it shouldn't be seen as a linear Euclidian space but rather as a \textbf{curved} space\\
 
 \vspace{3mm}
 \begin{block}{} 
-This curvature induces a Riemannian metric which gives more meaningful distances than the usual Eulidian distance
+This curvature induces a Riemannian metric \textbf{M} which gives more meaningful distances than the usual Eulidian distance
 \end{block}
 
-% implies that the natural interpolant between two latent points is no longer a straight line, but a curve
+\vspace{3mm}
+
+Shortest curves satisfy the following system of ODEs:
+
+\begin{align*}
+	\dfrac{d^2 \gamma_t}{dt^2} = -\dfrac{1}{2} \textbf{M}_{\gamma_t}^{-1} \left[ 2 \left( \mathbb{I}_d \otimes \dfrac{d \gamma_t}{dt}^\top \right) \dfrac{\partial \text{vec} [\textbf{M}_{\gamma_t}]}{\partial \gamma_t}  \dfrac{d \gamma_t}{dt} - \dfrac{\partial \text{vec} [\textbf{M}_{\gamma_t}]^\top}{\partial \gamma_t} \left(  \dfrac{d \gamma_t}{dt} \otimes  \dfrac{d \gamma_t}{dt} \right) \right]
+\end{align*} 
 
 \end{frame}
 
@@ -550,6 +563,22 @@ Implementation details:
 \eit
 -> Jacobian calculation (and metric calculation) were very slow. We were not able to reproduce all of the results of the paper, as it would have needed a lot of jacobian calculations
 \end{frame}
+
+\begin{frame}
+\frametitle{Experiment 1: meaningfull disances}
+
+The idea would be:
+\vspace{2mm}
+\bit
+\item solve the ODE to find the shortest path geodesic (\cite{chen2019fast})
+\item implement k-means from scratch such that
+\bit
+\item cluster assignment: identify the nearest centroid in the sense of geodesic distance
+\item centroid update: find the point that minimizes the sum of the geodesic distances squared within a cluster
+\eit
+\eit
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{The random walk experiment}

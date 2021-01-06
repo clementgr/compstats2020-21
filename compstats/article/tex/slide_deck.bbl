@@ -4,6 +4,11 @@
 Carl Doersch.
 \newblock Tutorial on variational autoencoders, 2021.
 
+\bibitem{chen2019fast}
+Nutan Chen, Francesco Ferroni, Alexej Klushyn, Alexandros Paraschos, Justin
+  Bayer, and Patrick van~der Smagt.
+\newblock Fast approximate geodesics for deep generative models, 2019.
+
 \bibitem{paper}
 Georgios Arvanitidis, Lars~Kai Hansen, and Søren Hauberg.
 \newblock Latent space oddity: on the curvature of deep generative models,
