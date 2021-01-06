@@ -583,10 +583,13 @@ The idea would be:
 \begin{frame}
 	\frametitle{The random walk experiment}
 	We performed multiple Gaussian random walks:
+	
 	Some with covariance a scaled identity matrix (Euclidean walk) (left)
+	
 	Some with covariance the inverse of the metric (Riemannian walk) (right)
-	\includegraphics[width=5cm]{../fig/euclidean_walk.png}
-	\includegraphics[width=5cm]{../fig/riemannian_walk.png}
+	\includegraphics[width=4cm]{../fig/euclidean_walk.png}
+	\hspace{0.5cm}
+	\includegraphics[width=4cm]{../fig/riemannian_walk.png}
 \end{frame}
 
 \begin{frame}
@@ -594,20 +597,25 @@ The idea would be:
 	\includegraphics[width=5cm]{../fig/euclidean_walk_noises.png}
 	\includegraphics[width=5cm]{../fig/riemannian_walk_noises.png}
 	When using the inverse of the metric as covariance, steps in direction of large changes are discouraged.
+	
 	That encourages regular changes in the images
+	
 	However, that does not force to stay around 0
 \end{frame}
 
 \begin{frame}
 	\frametitle{The random walk experiment: Conclusion}
 	It seems the gaussian walk with inverse metric as covariance is not a good choice of walk.
+	
 	But we do not know what walk they used.
+	
 	A LAND distribution would probably be a lot better, but it is even more expensive 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Conclusion}
 	Although the paper introduces novel ideas which seem useful, they are very computationnally expensive and not very practical.
+	
 	Moreover, the paper is quite vague on many points, making the results hard to reproduce, casting doubts on the performances 
 \end{frame}
 
