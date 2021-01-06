@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  6 JAN 2021 01:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  6 JAN 2021 01:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2089,7 +2089,7 @@ e/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/
 texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on slide_deck.pdf (28 pages, 667227 bytes).
+Output written on slide_deck.pdf (28 pages, 667241 bytes).
 PDF statistics:
  1360 PDF objects out of 1440 (max. 8388607)
  1217 compressed objects within 13 object streams
